@@ -1,0 +1,32 @@
+<%- include ("partials/header") %>
+<% if (message != "") {%>
+<div class="alert alert-primary" role="alert">
+    <%= message %>
+</div>
+<%  }%>
+<div class="row" style="padding-top: 10px">
+    <div class="col-auto">
+        <hr />
+    </div>
+    <div class="col">
+        <p class="h3" align="center">Start Chatting</p>
+    </div>
+    <div class="col">
+        <hr />
+    </div>
+</div>
+<div class="container">
+    <!-- This is where messages are loaded-->
+    <div id="messages" class="overflow-auto msgs" style="overflow-y:scroll; height: 500px;"></div>
+    <form action="#" id="msgForm" method="POST" style="bottom:0; margin: 0%">
+        <div class="input-group mb-3">
+            <input type="text" placeholder="Message" aria-label="Message" id="msg" class="form-control">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-success" id="sendBtn">
+                    Send
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<%- include("partials/footer") %>

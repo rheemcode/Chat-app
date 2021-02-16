@@ -1,0 +1,15 @@
+<%- include("partials/header") %> 
+<% if (message != "") {%>
+  <div class="alert alert-danger" role="alert">
+      <%= message %> 
+  </div>
+<%  }%> 
+<div class="login-page">
+    <div class="form">
+        <form class="login-form" action="/login" method="post">
+        <input type="text" name="username" id="username">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+<%- include("partials/footer") -%>
